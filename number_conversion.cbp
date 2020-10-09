@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="number_conversion" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="$make -f $makefile number_conversion.exe" />
+			<CompileFile command="$make -f $makefile $file" />
+			<Clean command="$make -f $makefile cleannumber_conversion.exe" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile number_conversion.exe" />
+			<SilentBuild command="$make -f $makefile number_conversion.exe &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/number_conversion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -f $makefile number_conversion.exe" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile cleannumber_conversion.exe" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile number_conversion.exe" />
+					<SilentBuild command="$make -f $makefile number_conversion.exe &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/number_conversion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../inc" />
+			<Add directory="../test" />
+			<Add directory="../unity" />
+		</Compiler>
+		<Unit filename="../inc/number_conversion.h" />
+		<Unit filename="../main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/number_conversion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../test/test_conversion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../test/test_conversion.h" />
+		<Unit filename="../unity/unity.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../unity/unity.h" />
+		<Unit filename="../unity/unity_internals.h" />
+		<Unit filename="Makefile" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
